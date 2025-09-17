@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_users_form_inherit_purchase_category" model="ir.ui.view">
+        <field name="name">res.users.purchase.category</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='access_rights']" position="inside">
+                <group>
+                    <field name="purchase_category_ids"
+                           widget="many2many_tags"
+                           groups="purchase_category.group_purchase_category"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
