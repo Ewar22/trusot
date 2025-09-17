@@ -1,4 +1,5 @@
 <odoo>
+    <!--aqui insertamos dentro de un modelo ya existe en nuevo campo, siempre y caundo el state sea purchase -->
     <record id="view_purchase_order_category" model="ir.ui.view">
         <field name="name">purchase.order.form.category</field>
         <field name="model">purchase.order</field>
@@ -7,7 +8,6 @@
             <xpath expr="//field[@name='partner_ref']" position="after">
                 <field name="purchase_category_id"
                        attrs="{'invisible': [('state', '!=', 'purchase')]}"/>
-                       <!-- 'required': [('state', '=', 'purchase')] -->
             </xpath>
         </field>
     </record>

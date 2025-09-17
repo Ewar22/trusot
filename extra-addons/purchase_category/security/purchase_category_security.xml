@@ -1,14 +1,13 @@
 <odoo>
-    <!-- Regla: solo ver las órdenes de compra que coincidan con las categorías del usuario -->
+    <!--esta regla nos permite ver las ordenes a las cuales pertenese o estan asigando ese usuaario-->
     <record id="purchase_order_category_rule" model="ir.rule">
         <field name="name">Mis ordenes de compra por categoria</field>
         <field name="model_id" ref="purchase.model_purchase_order"/>
         <field name="domain_force">['|',('purchase_category_id', 'in', user.purchase_category_ids.ids),('purchase_category_id','=',False)]</field>
+        
         <field name="perm_read" eval="1"/> 
-        <field name="perm_write" eval="1"/>  
-        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/> 
+        <field name="perm_create" eval="1"/> 
         <field name="perm_unlink" eval="0"/>
     </record>
 </odoo>
-
-

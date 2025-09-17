@@ -1,4 +1,7 @@
 <odoo>
+    <!-- dentro de un modelo ya creado en este caso res.user insertamos el nuevo campo el cual es 
+    purchase_category_ids el cual nos va a permitir asignarle una categoria la usuario
+    al momento de crearlo -->
     <record id="view_users_form_inherit_purchase_category" model="ir.ui.view">
         <field name="name">res.users.purchase.category</field>
         <field name="model">res.users</field>

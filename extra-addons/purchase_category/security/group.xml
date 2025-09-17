@@ -1,13 +1,14 @@
 <odoo>
-    <!-- se crea primeramente una categoria simpre que se crea un nuevo modelo -->
+    <!--Se crea una categoría de módulo para agrupar los elementos relacionados con Purchase Category.-->
     <record id="module_purchase_category" model="ir.module.category">
         <field name="name">Category</field>
         <field name="description">Categories</field>
     </record>
-    <!-- a la ctegoria creada se le crea un grupo para poder visualizarlo -->
+
+    <!--esto hace que podemas asiganar a una orden o usaurio una caegoria simpre y cuando este en el grupo Categorizar Compra -->
     <record id="group_purchase_category" model="res.groups">
         <field name="name">Categorizar Compra</field>
-        <field name="category_id" ref="purchase_category.module_purchase_category"></field>
+        <field name="category_id" ref="purchase_category.module_purchase_category"/>
     </record>
 
 </odoo>
